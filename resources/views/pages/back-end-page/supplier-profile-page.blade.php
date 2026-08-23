@@ -1,5 +1,0 @@
-@extends('layout.dashboard-sidenav')
-@section('title', 'Supplier Profile - মেসার্স আনিস ষ্টোর')
-@section('content')
-    @include('components.back-end.supplier.supplier-profile')
-@endsection

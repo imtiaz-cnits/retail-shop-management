@@ -368,7 +368,7 @@ function SupplierDelete(Request $request)
 
     public function SupplierProfilePage($id)
     {
-        return view('pages.back-end-page.supplier-profile-page', compact('id'));
+        return view('backend.pages.supplier-profile', compact('id'));
     }
 
     public function SupplierProfileData($id)

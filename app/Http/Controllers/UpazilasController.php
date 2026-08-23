@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Exception;
-use App\Models\Upazilas;
+use App\Models\Upazila;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +14,7 @@ class UpazilasController extends Controller
     {
         try {
             // Fetch upazilas with their district name, sorted by the latest
-            $UpazilasData = Upazilas::with('district:id,district_name')->latest()->get();
+            $UpazilasData = Upazila::with('district:id,district_name')->latest()->get();
 
             return response()->json(['status' => 'success', 'UpazilasData' => $UpazilasData]);
         } catch (Exception $e) {
@@ -28,13 +28,13 @@ class UpazilasController extends Controller
         try {
             $user_id = Auth::id();
             // Create the Upazilas
-            Upazilas::create([
+            Upazila::create([
                 'upazila_name' => $request->input('upazila_name'),
                 'district_id' => $request->input('district_id'),
                 'status' => $request->input('status'),
                 'user_id' => $user_id
             ]);
-            return response()->json(['status' => 'success', 'message' => "Upazilas Created Successfully"]);
+            return response()->json(['status' => 'success', 'message' => "Upazila Created Successfully"]);
         } catch (Exception $e) {
             return response()->json(['status' => 'fail', 'message' => $e->getMessage()]);
         }
@@ -45,7 +45,7 @@ class UpazilasController extends Controller
             $user_id = Auth::id();
             $request->validate(["id" => 'required|string']);
 
-            $rows = Upazilas ::where('id', $request->input('id'))->first();
+            $rows = Upazila ::where('id', $request->input('id'))->first();
             return response()->json(['status' => 'success', 'rows' => $rows]);
         } catch (Exception $e) {
             return response()->json(['status' => 'fail', 'message' => $e->getMessage()]);
@@ -56,10 +56,10 @@ class UpazilasController extends Controller
     {
     try {
         $user_id = Auth::id();
-        $UpazilasData_Update = Upazilas::find($request->input('id'));
+        $UpazilasData_Update = Upazila::find($request->input('id'));
 
         if (!$UpazilasData_Update) {
-            return response()->json(['status' => 'fail', 'message' => 'Upazilas not found.']);
+            return response()->json(['status' => 'fail', 'message' => 'Upazila not found.']);
         }
 
         // Validate inputs
@@ -69,14 +69,14 @@ class UpazilasController extends Controller
             'status' => 'required|in:Active,InActive',
         ]);
 
-        // Update Upazilas name and status
+        // Update Upazila name and status
         $UpazilasData_Update->upazila_name = $validatedData['upazila_name'];
         $UpazilasData_Update->district_id = $validatedData['district_id'];
         $UpazilasData_Update->status = $validatedData['status'];
 
         $UpazilasData_Update->save();
 
-        return response()->json(['status' => 'success', 'message' => 'Upazilas updated successfully']);
+        return response()->json(['status' => 'success', 'message' => 'Upazila updated successfully']);
     } catch (Exception $e) {
         return response()->json(['status' => 'fail', 'message' => $e->getMessage()]);
     }
@@ -89,17 +89,17 @@ class UpazilasController extends Controller
         $request->validate(['id' => 'required|string|min:1']);
 
         $Upazilas_id = $request->input('id');
-        $Upazilas_delete = Upazilas::find($Upazilas_id);
+        $Upazilas_delete = Upazila::find($Upazilas_id);
 
         if (!$Upazilas_delete) {
-            return response()->json(['status' => 'fail', 'message' => 'Upazilas not found.']);
+            return response()->json(['status' => 'fail', 'message' => 'Upazila not found.']);
         }
 
 
         // Delete Upazilas
         $Upazilas_delete->delete();
 
-        return response()->json(['status' => 'success', 'message' => 'Upazilas deleted successfully']);
+        return response()->json(['status' => 'success', 'message' => 'Upazila deleted successfully']);
     } catch (Exception $e) {
         return response()->json(['status' => 'fail', 'message' => $e->getMessage()]);
     }

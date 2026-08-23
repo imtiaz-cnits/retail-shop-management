@@ -1,3 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./fonts.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./style.css";
+@import "./navbar-sidebar.css";
+@import "./dark-mode.css";
+@import "./pos.css";
+@import "./user-profile.css";
+@import "./all-modal.css";
+@import "./table-funtion.css";
+@import "./progress.css";
+
+.cache-buster-dummy {
+    content: "2026-08-24T02:15:00";
+}

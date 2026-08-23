@@ -26,7 +26,7 @@ class Thana extends Model
      */
     public function upazila()
     {
-        return $this->belongsTo(Upazilas::class, 'upazila_id');
+        return $this->belongsTo(Upazila::class, 'upazila_id');
     }
 
 

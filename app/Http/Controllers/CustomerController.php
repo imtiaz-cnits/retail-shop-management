@@ -395,7 +395,7 @@ public function CustomerDelete(Request $request)
     public function CustomerProfilePage($id)
     {
         // কাস্টমারের আইডি ব্লেডে পাঠিয়ে দিচ্ছি, যাতে এপিআই কল করার সময় আইডিটা পাই
-        return view('components.back-end.Customer.customer-profile', compact('id')); 
+        return view('backend.components.customer.customer-profile', compact('id')); 
     }
 
     // ২. কাস্টমারের সমস্ত ডাটা এপিআই এর মাধ্যমে পাঠানোর জন্য

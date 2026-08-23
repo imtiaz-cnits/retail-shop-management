@@ -1,0 +1,10 @@
+@extends('layouts.dashboard-sidenav')
+@section('title','Purchase Page')
+@section('content')
+    @include('backend.components.purchase.purchase-list')
+    @include('backend.components.purchase.purchase-create')
+    @include('backend.components.supplier.supplier-create')
+    @include('backend.components.purchase.purchase-due-print')
+    @include('backend.components.purchase.purchase-update')
+    @include('backend.components.purchase.purchase-delete')
+@endsection

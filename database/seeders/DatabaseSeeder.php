@@ -9,7 +9,7 @@ use App\Models\SubCategory;
 use App\Models\Product;
 use App\Models\Supplier;
 use App\Models\District;
-use App\Models\Upazilas;
+use App\Models\Upazila;
 use App\Models\Thana;
 use App\Models\Location;
 use App\Models\Customer;
@@ -46,8 +46,8 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user->id,
         ]);
 
-        // 3. Upazilas (পাবনা সদর)
-        $upazila = Upazilas::create([
+        // 3. Upazila (পাবনা সদর)
+        $upazila = Upazila::create([
             'upazila_name' => 'পাবনা সদর',
             'status' => 'active',
             'district_id' => $district->id,

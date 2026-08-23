@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_200.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_600.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_700.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/bricolage_grotesque_normal_800.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TiroBangla';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tiro_bangla_italic_400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TiroBangla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tiro_bangla_normal_400.ttf') format('truetype');
+}
